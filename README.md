@@ -18,7 +18,14 @@ OpenStreetMap road network cells for Press. Data (c) OpenStreetMap contributors,
 - **Great Britain's place files** are in `places/` beside Ireland's, with every Great Britain postcode
   at the point Ordnance Survey's Code-Point Open gives it. Northern Ireland's names are Ireland's files.
 
-Both are derived from OpenStreetMap and are offered under the Open Database Licence 1.0
+- **Map layers** are in `layers/` (`layers/layers.json` lists them), one per Irish road cell on the same
+  key: the sea (from OpenStreetMap's land polygons), lakes, rivers, county lines and the names of
+  counties, bays and big lakes, and every building, houses kept apart from other buildings. They are
+  what Press's Roads map draws besides the roads (TASK-1720). Made by `tools/build-map-layers.py` in
+  the Press repository from download.openstreetmap.fr's Ireland and Northern Ireland extracts of
+  7-8 Oct 2026 and osmdata.openstreetmap.de's land polygons.
+
+All of them are derived from OpenStreetMap and are offered under the Open Database Licence 1.0
 (https://opendatacommons.org/licenses/odbl/1-0/). Credit: © OpenStreetMap contributors.
 
 The postcodes in Great Britain's place files: Contains OS data © Crown copyright and database right 2026.
