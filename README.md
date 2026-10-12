@@ -24,6 +24,10 @@ OpenStreetMap road network cells for Press. Data (c) OpenStreetMap contributors,
   what Press's Roads map draws besides the roads (TASK-1720). Made by `tools/build-map-layers.py` in
   the Press repository from download.openstreetmap.fr's Ireland and Northern Ireland extracts of
   7-8 Oct 2026 and osmdata.openstreetmap.de's land polygons.
+  **Great Britain's** are beside them (TASK-1723): one per cell in `roads/cells.json`, 122 files and 681 MB, cut
+  from download.openstreetmap.fr's united_kingdom extract of 11 Oct 2026 with the land polygons. The five coastal
+  cells Ireland and Great Britain share (52_-6, 53_-6, 54_-6, 55_-6, 55_-7) are cut over both countries, on Great
+  Britain's larger boxes, and replace Ireland's; `layers/layers.json` lists all 145.
 
 All of them are derived from OpenStreetMap and are offered under the Open Database Licence 1.0
 (https://opendatacommons.org/licenses/odbl/1-0/). Credit: © OpenStreetMap contributors.
