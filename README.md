@@ -29,6 +29,13 @@ OpenStreetMap road network cells for Press. Data (c) OpenStreetMap contributors,
   cells Ireland and Great Britain share (52_-6, 53_-6, 54_-6, 55_-6, 55_-7) are cut over both countries, on Great
   Britain's larger boxes, and replace Ireland's; `layers/layers.json` lists all 145.
 
+- **Building tiles** are in `buildings/` (`buildings/tiles.json` lists them with their sizes), for the map on a
+  trader's website enquiry form, where a customer puts a pin on her house (TASK-3025). They are the map layers'
+  buildings, unchanged, regrouped into tiles of 5 by 5 of the layers' 0.02° squares (0.1° a side), so her browser
+  fetches about 20 KB to see one house rather than a whole cell. Named `<ti>_<tj>.json.gz`, where `ti` and `tj` are
+  the square numbers divided by 5, rounded down. Made by `tools/cut-building-tiles.py` in the Press repository from
+  `layers/` as of 24 Oct 2026: 5,089 tiles, 284 MB.
+
 All of them are derived from OpenStreetMap and are offered under the Open Database Licence 1.0
 (https://opendatacommons.org/licenses/odbl/1-0/). Credit: © OpenStreetMap contributors.
 
