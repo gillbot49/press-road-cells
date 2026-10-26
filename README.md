@@ -36,6 +36,12 @@ OpenStreetMap road network cells for Press. Data (c) OpenStreetMap contributors,
   the square numbers divided by 5, rounded down. Made by `tools/cut-building-tiles.py` in the Press repository from
   `layers/` as of 24 Oct 2026: 5,089 tiles, 284 MB.
 
+- **Street tiles** are in `streets/` (`streets/streets.json` lists them with their sizes), drawn under the buildings on
+  the same enquiry form map, so a customer sees the roads round her house (TASK-2093). One per building tile, on the
+  same grid and names; each holds the road cells' roads crossing it, by the Roads map's five ranks, cut at the tile's
+  edge. Made by `tools/cut-street-tiles.mjs` in the Press repository from the `road-cells-v1` road cells and `roads/`
+  as of 26 Oct 2026: 4,900 tiles (the other building tiles have no road), 64 MB.
+
 - **Ground files** are in `ground/` (`ground/ground.json` lists them), one per Irish road cell on the same key, for
   the map of the area a trader covers on his website (TASK-3077): the national, primary and regional roads as the
   Roads map ranks them, the sea and lakes of 0.3 km² or more, and the rivers, thinned to about 40 m. usepress.app
